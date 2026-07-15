@@ -1,0 +1,11 @@
+services:
+  - type: worker
+    name: one-piece-rpg-bot
+    runtime: python
+    buildCommand: pip install -r one_piece_rpg/requirements.txt
+    startCommand: python run.py
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
+      - key: BOT_USERNAME
+        sync: false
